@@ -134,6 +134,34 @@
     });
   }
 
+  Promise.race = function (promises) {
+    return new Promise(function (resolve, reject) {
+      var isHandled = false;
+      promises.forEach(function (promise) {
+        promise.then(function(value) {
+          if (!isHandled) {
+            resolve(value);
+            isHandled = true;
+          }
+        }, reject);
+      });
+    });
+  }
+
+  Promise.all = function (promises) {
+    return new Promise(function (resolve, reject) {
+      var arr = []
+      promises.forEach(function (promise) {
+        promise.then(function (value) {
+          arr.push(value);
+          if (arr.length === promises.length) {
+            resolve(arr);
+          }
+        }, reject);
+      });
+    })
+  }
+
   Promise.deferred = function () {
     var global = {};
 
