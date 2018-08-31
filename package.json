@@ -4,11 +4,15 @@
   "description": "",
   "main": "Promise.js",
   "scripts": {
-    "test": "node src/promise-test.js"
+    "test": "node src/promise-test.js",
+    "lint": "node_modules/.bin/goodparts path/to/files/for/linting"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "promises-aplus-tests": "^2.1.2"
+  },
+  "devDependencies": {
+    "goodparts": "^1.2.1"
   }
 }
