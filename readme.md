@@ -1,5 +1,4 @@
-# [SimplePromise](https://github.com/xwchris/simple-promise) [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts") [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
-***
+# [SimplePromise](https://github.com/xwchris/simple-promise) · [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts") [![Node version](https://img.shields.io/node/v/[NPM-MODULE-NAME].svg?style=flat)](http://nodejs.org/download/)
 
 `SimplePromise` is an simple implementation follow the [Promises/A+ specification](https://promisesaplus.com/).
 
