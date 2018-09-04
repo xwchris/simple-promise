@@ -25,7 +25,9 @@
         setTimeout(function() {
           self.status = 'fulfilled';
           self.value = value;
-          self.resolveCbs.forEach(cb => cb(value));
+          self.resolveCbs.forEach(function (cb) {
+            cb(value);
+          });
         });
       }
     }
@@ -36,7 +38,9 @@
         setTimeout(function() {
           self.status = 'rejected';
           self.reason = reason;
-          self.rejectCbs.forEach(cb => cb(reason));
+          self.rejectCbs.forEach(function (cb) {
+            cb(reason);
+          });
         });
       }
     }
