@@ -2,6 +2,8 @@
 
 `SimplePromise` is an simple implementation follow the [Promises/A+ specification](https://promisesaplus.com/).
 
+Promises_A+.png
+
 It can be used same api with ES6 Promise
 
 ## How to use
