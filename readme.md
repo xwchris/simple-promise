@@ -22,6 +22,7 @@ npm run test
 This Simple Promise has the same api with ES6 Promise
 
 - Promise.prototype.then：then method the register callback
+- Promise.prototype.catch：catch method can catch the error
 - Promise.resolve：create an fulfilled promise
 - Promise.reject：create an rejected promise
 - Promise.race：resolve immediately if one promise resolve
