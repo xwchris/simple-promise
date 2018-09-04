@@ -38,6 +38,10 @@
         setTimeout(function() {
           self.status = 'rejected';
           self.reason = reason;
+          if (self.rejectCbs.length === 0) {
+            console.log('UnhandledPromiseRejectionWarning: ' + reason);
+            console.log('UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise whichwas not handled with .catch()');
+          }
           self.rejectCbs.forEach(function (cb) {
             cb(reason);
           });
