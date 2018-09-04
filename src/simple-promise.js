@@ -154,6 +154,10 @@
     return promise;
   }
 
+  Promise.prototype.catch = function (onRejected) {
+    return this.then(null, onRejected);
+  }
+
   Promise.resolve = function (value) {
     return new Promise(function (resolve) {
       resolve(value);
@@ -206,12 +210,28 @@
   Promise.all = function (promises) {
     return new Promise(function (resolve, reject) {
       var arr = []
-      promises.forEach(function (promise) {
+      var length = promises.length;
+      var count = 0;
+
+      var cb = function(index, resolve, value) {
+        if (value instanceof Promise) {
+          value.then(function(newValue) {
+            cb(index, resolve, newValue)
+          });
+          return;
+        }
+
+        arr[index] = value;
+
+        count++;
+        if (count === length) {
+          resolve(arr);
+        }
+      }
+
+      promises.forEach(function (promise, index) {
         promise.then(function (value) {
-          arr.push(value);
-          if (arr.length === promises.length) {
-            resolve(arr);
-          }
+          cb(index, resolve, value);
         }, reject);
       });
     })
