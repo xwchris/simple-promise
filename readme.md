@@ -1,8 +1,8 @@
 # [SimplePromise](https://github.com/xwchris/simple-promise) · [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 
-`SimplePromise` is an simple implementation follow the [Promises/A+ specification](https://promisesaplus.com/).
-
 ![image](https://user-images.githubusercontent.com/13817144/45035011-8601ae80-b08b-11e8-8c65-3cd16470340f.png)
+
+`SimplePromise` is an simple implementation follow the [Promises/A+ specification](https://promisesaplus.com/).
 
 It can be used same api with ES6 Promise
 
